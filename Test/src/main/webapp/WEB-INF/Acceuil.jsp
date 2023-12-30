@@ -11,9 +11,14 @@
         <p>Bonjour à vous !</p>
         
         
+          <%
+			    String name = (String) request.getAttribute("name");
+			    out.println(name);
+    	%>
+        
         <%
         for (int i = 0; i <= 10; i = i + 1) {
-        	  out.println("Anys <br />");
+        	  out.println(" <br />  <br /> Anys <br />");
         	}       
         %>
     </body>

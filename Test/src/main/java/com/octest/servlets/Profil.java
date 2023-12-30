@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.octest.beans.Student;
+
 /**
- * Servlet implementation class Acceuil
+ * Servlet implementation class Profil
  */
-@WebServlet("/Acceuil")
-public class Acceuil extends HttpServlet {
+@WebServlet("/Profil")
+public class Profil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Acceuil() {
+    public Profil() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,13 +29,18 @@ public class Acceuil extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		 String name = request.getParameter("name");
-	     request.setAttribute("name", name);
-		// TODO Auto-generated method stub
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Acceuil.jsp").forward(request, response);
-        
-        
-        
+		Student student = new Student();
+		student.setNom("Anys");
+		student.setPrenom("Louzal");
+		student.setAge(20);
+		
+		
+		request.setAttribute("student",student);
+		
+        this.getServletContext().getRequestDispatcher("/WEB-INF/profil.jsp").forward(request, response);
+		
+		
+		
 	}
 
 	/**
