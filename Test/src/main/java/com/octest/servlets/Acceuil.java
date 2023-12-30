@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Test
+ * Servlet implementation class Acceuil
  */
-@WebServlet("/Test")
-public class Test extends HttpServlet {
+@WebServlet("/Acceuil")
+public class Acceuil extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Test() {
+    public Acceuil() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,15 +26,8 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		int nbr = 13 ;
-		request.setAttribute("variable", nbr);
-		
-		
-		String nom = "anys louzal";
-		request.setAttribute("var",nom);
-		
-        this.getServletContext().getRequestDispatcher("/WEB-INF/salut.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+        this.getServletContext().getRequestDispatcher("/WEB-INF/Acceuil.jsp").forward(request, response);
 	}
 
 	/**
